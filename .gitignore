@@ -1,0 +1,5 @@
+django_allauth_extras.egg-info
+__pycache__
+.idea
+build
+dist
