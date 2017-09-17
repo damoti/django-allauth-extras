@@ -45,7 +45,7 @@ class BaseUserChangeForm(DjangoBaseUserChangeForm):
         return self.initial.get("password")
 
     def save(self, commit=True):
-        if self.instance.id is not None:
+        if self.instance.id is None:
             self.instance.set_unusable_password()
         return super().save(commit=False)
 
